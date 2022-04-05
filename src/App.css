@@ -155,7 +155,7 @@ input:focus {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: maroon;
   font-weight: 600;
   margin: 0;
 }
@@ -163,7 +163,7 @@ input:focus {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color: maroon;
   margin: 0;
 }
 
@@ -185,7 +185,7 @@ input:focus {
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
+  background-color: white;
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
@@ -194,7 +194,7 @@ input:focus {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: maroon;
   margin: 0;
 }
 

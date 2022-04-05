@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import Moment from "react-moment";
+import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
+
+
 
 export const ResultCard = ({ movie }) => {
   const {
@@ -8,6 +11,7 @@ export const ResultCard = ({ movie }) => {
     addMovieToWatched,
     watchlist,
     watched,
+    viewInfo,
   } = useContext(GlobalContext);
 
   let storedMovie = watchlist.find((o) => o.id === movie.id);
@@ -20,6 +24,8 @@ export const ResultCard = ({ movie }) => {
     : false;
 
   const watchedDisabled = storedMovieWatched ? true : false;
+
+  var id = movie.id;
 
   return (
     <div className="result-card">
@@ -36,7 +42,8 @@ export const ResultCard = ({ movie }) => {
 
       <div className="info">
         <div className="header">
-          <h3 className="title">{movie.title}</h3>
+          <Link to= {{pathname: "/movieinfo", movie:{movie}, search:"", hash:"", key:{id} }}> <h3 className="title">{movie.title}</h3></Link>
+
           <h4 className="release-date">
             <Moment format="YYYY">{movie.release_date}</Moment>
           </h4>
@@ -50,15 +57,10 @@ export const ResultCard = ({ movie }) => {
           >
             Add to Watchlist
           </button>
-
-          <button
-            className="btn"
-            disabled={watchedDisabled}
-            onClick={() => addMovieToWatched(movie)}
-          >
-            Add to Watched
-          </button>
         </div>
+        
+     
+        
       </div>
     </div>
   );
