@@ -8,7 +8,7 @@ export const MovieCard = ({ movie, type }) => {
 
       <img
         src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-        alt={`${movie.title} Poster`}
+        alt={`${movie.original_title} Poster`}
       />
 
       <MovieControls type={type} movie={movie} />

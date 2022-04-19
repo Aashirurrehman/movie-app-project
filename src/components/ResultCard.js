@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
+import { MovieInfo } from "./Movie Infopage/MovieInfo";
 
 
-
-export const ResultCard = ({ movie }) => {
+export const ResultCard = ( {movie} ) => {
   const {
     addMovieToWatchlist,
     addMovieToWatched,
@@ -25,8 +25,6 @@ export const ResultCard = ({ movie }) => {
 
   const watchedDisabled = storedMovieWatched ? true : false;
 
-  var id = movie.id;
-
   return (
     <div className="result-card">
       <div className="poster-wrapper">
@@ -41,13 +39,22 @@ export const ResultCard = ({ movie }) => {
       </div>
 
       <div className="info">
+
         <div className="header">
-          <Link to= {{pathname: "/movieinfo", movie:{movie}, search:"", hash:"", key:{id} }}> <h3 className="title">{movie.title}</h3></Link>
+          <Link to={`/movieInfo/${movie.id}`}>
+            
+            <h3 className="title">{movie.title}</h3>
+          </Link>
+
+        </div>
 
           <h4 className="release-date">
             <Moment format="YYYY">{movie.release_date}</Moment>
           </h4>
-        </div>
+          {console.log(movie.title)}
+         
+          
+        
 
         <div className="controls">
           <button
@@ -58,9 +65,6 @@ export const ResultCard = ({ movie }) => {
             Add to Watchlist
           </button>
         </div>
-        
-     
-        
       </div>
     </div>
   );

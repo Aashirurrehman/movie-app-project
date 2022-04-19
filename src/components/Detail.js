@@ -1,12 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
 export const Detail = ({ movie }) => {
+
+  const {id} = useParams();
   return (
     <>
-      <Navbar />
+      
       <div className="container">
-        {movie.map(() => movie.title  ? (
+        {movie.map((movie) => movie.title  ? (
           <div key={movie.id} className="rightleft mt-4 border-1">
             <div className="left">
               <h1>{movie.title}</h1>
