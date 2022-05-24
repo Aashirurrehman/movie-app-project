@@ -276,3 +276,33 @@ input:focus {
   font-size: 3rem;
   text-align: center;
 }
+
+/* .card{
+  
+
+  /* padding: 2 rem 4 rem;
+  border-radius: 10px;
+  box-shadow: 2px 1px 5px maroon;
+  margin-bottom: 2rem;
+  background-color: white;        
+  margin-top: 10px;                                     */
+  
+  
+
+ */
+
+
+.card--title{
+  margin-bottom: 0.3rem;
+  font-size: 3.2rem;
+ justify-content: center;
+ display: flex;
+
+}
+
+.card--image{
+  display: block;
+  margin: 30px;
+  height: 450px;
+}
+

@@ -23,6 +23,7 @@ export const Add = () => {
         } else {
           setResults([]);
           
+          
         }
 
       });

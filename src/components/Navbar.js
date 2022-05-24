@@ -19,7 +19,7 @@ const Navbar = () => {
                         <Link to='/watched'>Watched</Link>
                     </li>
                     <li>
-                        <Link to='/Add' className='btn'>+ Add</Link>
+                        <Link to='/Add' className='btn'>Search</Link>
                     </li>
                     
                 </ul>

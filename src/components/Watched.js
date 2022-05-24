@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
+import { Link } from "react-router-dom";
 
 export const Watched = () => {
   const { watched } = useContext(GlobalContext);
@@ -19,7 +20,11 @@ export const Watched = () => {
         {watched.length > 0 ? (
           <div className="movie-grid">
             {watched.map((movie) => (
-              <MovieCard movie={movie} key={movie.id} type="watched" />
+              <Link to={`/movieInfo/${movie.id}`}>
+                <MovieCard movie={movie} key={movie.id} type="watched" />
+
+              </Link>
+              
             ))}
           </div>
         ) : (
@@ -29,3 +34,4 @@ export const Watched = () => {
     </div>
   );
 };
+

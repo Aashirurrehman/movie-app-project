@@ -51,7 +51,7 @@ export const ResultCard = ( {movie} ) => {
           <h4 className="release-date">
             <Moment format="YYYY">{movie.release_date}</Moment>
           </h4>
-          {console.log(movie.title)}
+          
          
           
         
